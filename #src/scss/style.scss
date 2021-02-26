@@ -1,0 +1,224 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url('../fonts/#{$file_name}.woff') format('woff'),
+      url('../fonts/#{$file_name}.woff2') format('woff2');
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@import 'fonts';
+
+$colgrey: #63718e;
+$coldarkgrey: #3a3a3a;
+$colgreen: #4cae50;
+$coldarkblue: #111563;
+$collightblue: #286dbd;
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1180px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    margin-left: 10px;
+  }
+
+  &__txt {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 100%;
+    color: $coldarkgrey;
+
+    &-light {
+      font-size: 15px;
+      line-height: 100%;
+      color: $colgrey;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 88px;
+    box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
+  }
+
+  &__navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__navbar {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__svg {
+    & path {
+      transition: all 0.5s;
+    }
+
+    &:hover path {
+      fill: $coldarkgrey;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+
+    & path {
+      transition: all 0.5s;
+    }
+
+    &:hover li {
+      color: $coldarkgrey;
+    }
+
+    &:hover path {
+      fill: $coldarkgrey;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin: 7px;
+    font-family: 'OpenSans';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 15px;
+    color: $colgrey;
+    transition: all 0.5s;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__button {
+    margin: 7px;
+    width: 118px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: $colgreen;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'OpenSans';
+    transition: all 0.4s;
+
+    &:hover {
+      box-shadow: 0px 5px 10px rgba(76, 174, 80, 0.3);
+    }
+
+    &-light {
+      background-color: #fff;
+      color: $colgrey;
+      width: 125px;
+      box-sizing: border-box;
+      border: 2px solid $colgrey;
+
+      &:hover {
+        border: 2px solid $colgreen;
+        color: $colgreen;
+        box-shadow: none;
+      }
+    }
+
+    &-large {
+      width: 280px;
+      height: 53px;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__textcontent {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+
+  &__imagecontent {
+    width: 50%;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__title {
+    font-family: 'Epilogue';
+    font-size: 42px;
+    line-height: 50.4px;
+    color: $coldarkblue;
+  }
+
+  &__description {
+    font-family: 'OpenSans';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 150%;
+    color: $colgrey;
+    margin: 20px 0px;
+
+    & span {
+      color: $collightblue;
+    }
+  }
+}
