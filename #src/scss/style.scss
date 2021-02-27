@@ -20,7 +20,6 @@ $collightblue: #286dbd;
 * {
   margin: 0;
   padding: 0;
-  background-color: #fff;
 }
 
 .wrapper {
@@ -52,6 +51,171 @@ $collightblue: #286dbd;
   }
 }
 
+.notvisible {
+  display: none;
+}
+
+#anruf {
+  &:hover {
+    color: $coldarkgrey;
+  }
+
+  &:hover path {
+    fill: $coldarkgrey;
+  }
+}
+
+.input {
+  width: 253px;
+  height: 50px;
+  background: #ffffff;
+  border: none;
+  margin: 5px 0 5px 0;
+  box-shadow: 0px 0px 1px #052953;
+  border-radius: 10px;
+  outline: none;
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  transition: all 0.5s;
+
+  &::placeholder {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    left: 20px;
+  }
+
+  &:focus {
+    border-style: none;
+    border: 1px solid #4cae50;
+    box-sizing: border-box;
+  }
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  &__content {
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1017px;
+    height: 100%;
+    max-height: 507px;
+    box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
+    border-radius: 35px;
+  }
+
+  &__img {
+    border-radius: 35px;
+    box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
+  }
+
+  &__text {
+    display: flex;
+    margin: 50px 50px 50px 50px;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75%;
+  }
+
+  &__title {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: bold;
+    color: #000;
+    font-size: 36px;
+  }
+
+  &__description {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: normal;
+    color: #000;
+    font-size: 18px;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__close {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__svg {
+    top: 25px;
+    right: 29px;
+    position: absolute;
+
+    & g {
+      transition: all 0.3s;
+    }
+
+    &:hover g {
+      opacity: 1;
+    }
+  }
+}
+
+.button {
+  margin: 7px;
+  width: 118px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: $colgreen;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'OpenSans';
+  transition: all 0.4s;
+
+  &:hover {
+    box-shadow: 0px 5px 10px rgba(76, 174, 80, 0.3);
+  }
+
+  &-light {
+    background-color: #fff;
+    color: $colgrey;
+    width: 125px;
+    box-sizing: border-box;
+    border: 2px solid $colgrey;
+
+    &:hover {
+      border: 2px solid $colgreen;
+      color: $colgreen;
+      box-shadow: none;
+    }
+  }
+
+  &-middle {
+    width: 200px;
+    height: 56px;
+  }
+
+  &-large {
+    width: 280px;
+    height: 53px;
+    margin: 0 0 20px 0;
+  }
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -59,6 +223,7 @@ $collightblue: #286dbd;
   align-items: center;
   width: 100%;
   height: 100vh;
+  background-color: #fff;
 
   &__header {
     width: 100%;
@@ -135,44 +300,6 @@ $collightblue: #286dbd;
     align-items: center;
   }
 
-  &__button {
-    margin: 7px;
-    width: 118px;
-    height: 35px;
-    border-radius: 10px;
-    background-color: $colgreen;
-    border: none;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 700;
-    font-family: 'OpenSans';
-    transition: all 0.4s;
-
-    &:hover {
-      box-shadow: 0px 5px 10px rgba(76, 174, 80, 0.3);
-    }
-
-    &-light {
-      background-color: #fff;
-      color: $colgrey;
-      width: 125px;
-      box-sizing: border-box;
-      border: 2px solid $colgrey;
-
-      &:hover {
-        border: 2px solid $colgreen;
-        color: $colgreen;
-        box-shadow: none;
-      }
-    }
-
-    &-large {
-      width: 280px;
-      height: 53px;
-      margin: 0 0 20px 0;
-    }
-  }
-
   &__main {
     width: 100%;
     display: flex;
@@ -211,6 +338,7 @@ $collightblue: #286dbd;
   &__description {
     font-family: 'OpenSans';
     font-size: 18px;
+    letter-spacing: 0.25px;
     font-style: normal;
     font-weight: normal;
     line-height: 150%;

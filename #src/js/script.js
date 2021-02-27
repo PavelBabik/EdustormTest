@@ -14,3 +14,17 @@ testWebP(function (support) {
     document.querySelector('body').classList.add('no-webp');
   }
 });
+
+let showbtn = document.getElementById('anruf');
+let closebtn = document.getElementById('closeBtn');
+let modal = document.getElementById('modal');
+
+showbtn.addEventListener('click', function () {
+  modal.classList.remove('notvisible');
+  modal.classList.add('modal');
+});
+
+closebtn.addEventListener('click', function () {
+  modal.classList.remove('modal');
+  modal.classList.add('notvisible');
+});

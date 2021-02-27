@@ -1,4 +1,39 @@
 <header class="header">
+  <div class="notvisible" id="modal">
+    <div class="modal__content">
+      <div class="modal__image">
+        <img src="./img/popup_img.png" alt="popup_img" class="modal__img" />
+      </div>
+      <div class="modal__text">
+        <h2 class="modal__title">Halt, nimm dich Zeit!</h2>
+        <p class="modal__description">
+          Gehör zu den Ersten, die von den neuesten und attraktivsten Angeboten der
+          hausarbeit-agentur.com profitieren und sich exklusiv einen 5% Rabatt holen!
+        </p>
+        <div class="modal__inputs">
+          <input class="input" type="text" placeholder="deine@email.com" />
+          <input class="input" type="text" placeholder="Name" />
+        </div>
+        <button class="button button-middle">Ja, ich möchte!</button>
+      </div>
+      <div class="modal__close">
+        <svg
+          class="modal__svg"
+          id="closeBtn"
+          width="34"
+          height="33"
+          viewBox="0 0 34 33"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g opacity="0.2">
+            <line x1="33.3536" y1="0.353553" x2="1.35356" y2="32.3535" stroke="black" />
+            <line x1="32.6465" y1="32.3536" x2="0.646452" y2="0.35356" stroke="black" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
   <div class="header__header">
     <div class="wrapper">
       <div class="header__navigation">
@@ -53,37 +88,36 @@
           </div>
           <div class="header__menu">
             <ul class="header__items">
-              <a href="#" class="header__link">
-                <li class="header__item">
-                  <div class="header__svg">
-                    <svg
-                      width="24"
-                      height="25"
-                      viewBox="0 0 24 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M15.535 3.30797C14.779 2.55197 13.463 2.55197 12.707 3.30797L2.808 13.207C2.4333 13.5822 2.22284 14.0907 2.22284 14.621C2.22284 15.1512 2.4333 15.6598 2.808 16.035L8.465 21.692C8.843 22.07 9.345 22.278 9.879 22.278C10.413 22.278 10.915 22.07 11.293 21.692L21.192 11.793C21.57 11.415 21.778 10.913 21.778 10.379C21.778 9.84497 21.57 9.34297 21.192 8.96497L15.535 3.30797ZM9.879 20.278V21.278V20.278L4.222 14.621L14.121 4.72197L19.778 10.379L9.879 20.278Z"
-                        fill="#63718E"
-                      />
-                      <path
-                        d="M9 16.5C9.55228 16.5 10 16.0523 10 15.5C10 14.9477 9.55228 14.5 9 14.5C8.44772 14.5 8 14.9477 8 15.5C8 16.0523 8.44772 16.5 9 16.5Z"
-                        fill="#63718E"
-                      />
-                      <path
-                        d="M15.707 22.207L14.293 20.793L20.293 14.793L21.707 16.208L15.707 22.207Z"
-                        fill="#63718E"
-                      />
-                      <path
-                        d="M8.293 2.79297L9.707 4.20697L3.707 10.207L2.293 8.79197L8.293 2.79297Z"
-                        fill="#63718E"
-                      />
-                    </svg>
-                  </div>
-                  Anruf
-                </li>
-              </a>
+              <li class="header__item" id="anruf">
+                <div class="header__svg">
+                  <svg
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.535 3.30797C14.779 2.55197 13.463 2.55197 12.707 3.30797L2.808 13.207C2.4333 13.5822 2.22284 14.0907 2.22284 14.621C2.22284 15.1512 2.4333 15.6598 2.808 16.035L8.465 21.692C8.843 22.07 9.345 22.278 9.879 22.278C10.413 22.278 10.915 22.07 11.293 21.692L21.192 11.793C21.57 11.415 21.778 10.913 21.778 10.379C21.778 9.84497 21.57 9.34297 21.192 8.96497L15.535 3.30797ZM9.879 20.278V21.278V20.278L4.222 14.621L14.121 4.72197L19.778 10.379L9.879 20.278Z"
+                      fill="#63718E"
+                    />
+                    <path
+                      d="M9 16.5C9.55228 16.5 10 16.0523 10 15.5C10 14.9477 9.55228 14.5 9 14.5C8.44772 14.5 8 14.9477 8 15.5C8 16.0523 8.44772 16.5 9 16.5Z"
+                      fill="#63718E"
+                    />
+                    <path
+                      d="M15.707 22.207L14.293 20.793L20.293 14.793L21.707 16.208L15.707 22.207Z"
+                      fill="#63718E"
+                    />
+                    <path
+                      d="M8.293 2.79297L9.707 4.20697L3.707 10.207L2.293 8.79197L8.293 2.79297Z"
+                      fill="#63718E"
+                    />
+                  </svg>
+                </div>
+                Anruf
+              </li>
+
               <a href="#" class="header__link">
                 <li class="header__item">Generatoren</li>
               </a>
@@ -102,8 +136,8 @@
             </ul>
           </div>
           <div class="header__buttons">
-            <button class="header__button">Anfragen</button>
-            <button class="header__button header__button-light">Anmelden</button>
+            <button class="button">Anfragen</button>
+            <button class="button button-light">Anmelden</button>
           </div>
         </div>
       </div>
@@ -131,10 +165,10 @@
             Leistungen stehen nicht nur auf Deutsch, sondern beispielsweise auch auf Englisch zur
             Verfügung.
           </p>
-          <button class="header__button header__button-large">Probier jetzt aus</button>
+          <button class="button button-large">Probier jetzt aus</button>
         </div>
         <div class="header__imagecontent">
-          <img class="header__image" src="./img/promo_image.png" alt="promoimage" />
+          <img class="header__image" src="./img/promo-image.png" alt="promoimage" />
         </div>
       </div>
     </div>
