@@ -79,9 +79,7 @@ function css() {
         cascade: true,
       }),
     )
-    .pipe(
-      webpcss({}),
-    )
+    .pipe(webpcss({}))
     .pipe(dest(path.build.css))
     .pipe(clean_css())
     .pipe(
