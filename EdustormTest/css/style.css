@@ -621,7 +621,7 @@
 }
 
 .requirements__field-right {
-  height: 1000%;
+  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -734,6 +734,7 @@
   font-size: 32px;
   font-weight: bold;
   color: #111563;
+  text-align: center;
 }
 
 .price__description {
@@ -743,6 +744,7 @@
   font-size: 18px;
   font-weight: 400;
   color: #63718e;
+  text-align: center;
 }
 
 .price__list {
@@ -910,6 +912,140 @@
   font-family: 'Epilogue';
   font-size: 32px;
   font-weight: 700;
+}
+
+.steps {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.steps__title {
+  font-family: 'Epilogue';
+  font-size: 32px;
+  font-weight: 700;
+  color: #111563;
+}
+
+.steps__txt {
+  margin-top: 16px;
+  text-align: center;
+  max-width: 840px;
+  font-family: 'OpenSans';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.25px;
+  color: #63718e;
+}
+
+.steps__numbers {
+  margin-top: 25px;
+  width: 100%;
+  max-width: 780px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.steps__number {
+  border-radius: 50%;
+  background-color: #e8f8ff;
+  width: 40px;
+  height: 40px;
+  color: #bad9e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Epilogue';
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.steps__number-green {
+  background-color: #e5fff0;
+  color: #4cae50;
+}
+
+.steps__line {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: #e8f8ff;
+}
+
+.steps__line-green {
+  background-color: #4cae50;
+}
+
+.steps__texts {
+  width: 100%;
+  max-width: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.steps__txtitem {
+  font-family: 'OpenSans';
+  font-size: 16px;
+  font-weight: 400;
+  width: 25px;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    background: #111563;
+    background-size: 0%;
+  }
+
+  100% {
+    background: #111563;
+    background-size: 100%;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background: #111563;
+    background-size: 0%;
+  }
+
+  100% {
+    background: #111563;
+    background-size: 100%;
+  }
 }
 
 .select {
