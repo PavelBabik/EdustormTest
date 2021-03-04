@@ -698,17 +698,125 @@ $collightblue: #286dbd;
 
   &__texts {
     width: 100%;
-    max-width: 900px;
+    max-width: 980px;
     display: flex;
     list-style: none;
     justify-content: space-between;
   }
 
   &__txtitem {
+    width: 1/4 * 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-family: 'OpenSans';
     font-size: 16px;
     font-weight: 400;
-    width: 1/4 * 100px;
+    color: #bad9e7;
+
+    &-green {
+      color: $colgreen;
+    }
+  }
+}
+
+.stepthree {
+  width: 100%;
+  max-width: 950px;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin-bottom: 10px;
+    font-family: 'Epilogue';
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 23px;
+    color: $coldarkblue;
+
+    &-small {
+      font-size: 22px;
+    }
+
+    &-grey {
+      margin: 0;
+      margin-left: 5px;
+      font-weight: normal;
+      color: $coldarkgrey;
+      font-size: 22px;
+      transition: all 0.5s;
+    }
+  }
+
+  &__details {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+
+    &-active h4 {
+      color: $colgreen;
+      font-weight: bold;
+    }
+
+    &-active div > div {
+      background-color: $colgreen;
+      width: 100%;
+    }
+
+    &:hover h4 {
+      color: $colgreen;
+      font-weight: bold;
+    }
+
+    &:hover div > div {
+      background-color: $colgreen;
+      width: 100%;
+    }
+  }
+
+  &__line {
+    min-height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40px;
+  }
+
+  &__horisontal {
+    width: 50%;
+    height: 1px;
+    background-color: $coldarkgrey;
+    transition: all 0.5s;
+  }
+
+  &__text {
+    font-family: 'OpenSans';
+    font-size: 16px;
+    font-weight: normal;
+    color: $coldarkgrey;
+    margin-bottom: 20px;
+
+    &-span {
+      font-weight: bold;
+      color: $colgreen;
+    }
   }
 }
 
