@@ -102,6 +102,11 @@
   max-width: 1180px;
 }
 
+.wrap {
+  width: 100%;
+  margin: 20px;
+}
+
 .largewrapper {
   width: 100%;
   max-width: 1300px;
@@ -408,6 +413,11 @@
   width: 280px;
   height: 53px;
   margin: 0 0 20px 0;
+}
+
+.button-big {
+  width: 380px;
+  height: 62px;
 }
 
 .button-submit {
@@ -1614,6 +1624,119 @@
 
 .articles__imagebg {
   position: relative;
+}
+
+.faqsection {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.faqsection__title {
+  width: 100%;
+  text-align: center;
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+  color: #111563;
+}
+
+.faqsection__title-small {
+  text-align: start;
+  font-family: 'OpenSans';
+  font-size: 22px;
+}
+
+.faqsection__item {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
+          box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.faqsection__name {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.faqsection__arrow,
+.faqsection__arrowone,
+.faqsection__arrowtwo {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  opacity: 0.5;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.faqsection__arrow:hover,
+.faqsection__arrowone:hover,
+.faqsection__arrowtwo:hover {
+  opacity: 1;
+}
+
+.faqsection__description,
+.faqsection__descriptionone,
+.faqsection__descriptiontwo {
+  border-top: 1px solid #f9fafc;
+  margin-top: 15px;
+  padding-top: 10px;
+  width: 100%;
+  font-family: 'OpenSans';
+  font-size: 18px;
+  color: #63718e;
+}
+
+.faqsection__list {
+  list-style: none;
+  margin: 15px;
+}
+
+.faqsection__button {
+  width: 100%;
+  margin-top: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rotate {
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
 }
 
 @-webkit-keyframes markeranimate {

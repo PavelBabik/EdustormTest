@@ -109,3 +109,18 @@ $(document).ready(function () {
     $('.articles__textthird').removeClass('notvisibletext');
   });
 });
+
+$(document).ready(function () {
+  $('.faqsection__arrow').on('click', function () {
+    $('.faqsection__arrow').toggleClass('rotate');
+    $('.faqsection__description').toggleClass('notvisible');
+  });
+  $('.faqsection__arrowone').on('click', function () {
+    $('.faqsection__arrowone').toggleClass('rotate');
+    $('.faqsection__descriptionone').toggleClass('notvisible');
+  });
+  $('.faqsection__arrowtwo').on('click', function () {
+    $('.faqsection__arrowtwo').toggleClass('rotate');
+    $('.faqsection__descriptiontwo').toggleClass('notvisible');
+  });
+});
