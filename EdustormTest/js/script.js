@@ -83,3 +83,29 @@ $('.select').each(function () {
   });
 });
 
+$(document).ready(function () {
+  $('.articles__first').on('click', function () {
+    $(this).addClass('active');
+    $('.articles__second').removeClass('active');
+    $('.articles__third').removeClass('active');
+    $('.articles__textfirst').removeClass('notvisibletext');
+    $('.articles__textsecond').addClass('notvisibletext');
+    $('.articles__textthird').addClass('notvisibletext');
+  });
+  $('.articles__second').on('click', function () {
+    $(this).addClass('active');
+    $('.articles__first').removeClass('active');
+    $('.articles__third').removeClass('active');
+    $('.articles__textfirst').addClass('notvisibletext');
+    $('.articles__textsecond').removeClass('notvisibletext');
+    $('.articles__textthird').addClass('notvisibletext');
+  });
+  $('.articles__third').on('click', function () {
+    $(this).addClass('active');
+    $('.articles__first').removeClass('active');
+    $('.articles__second').removeClass('active');
+    $('.articles__textfirst').addClass('notvisibletext');
+    $('.articles__textsecond').addClass('notvisibletext');
+    $('.articles__textthird').removeClass('notvisibletext');
+  });
+});

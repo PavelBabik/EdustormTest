@@ -440,13 +440,40 @@ $collightblue: #286dbd;
     width: 100%;
   }
 
-  &__mark {
-    padding: 28px;
-    transform: translateX(-20%) translateY(-75%);
-    width: 380px;
-    background-color: #fff;
-    box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
-    border-radius: 8px;
+  &__text {
+    top: 0;
+    width: 100%;
+    max-width: 590px;
+  }
+
+  &__title {
+    font-family: 'Epilogue';
+    font-size: 32px;
+    font-weight: bold;
+    color: $coldarkblue;
+  }
+
+  &__description {
+    margin-top: 10px;
+    font-family: 'OpenSans';
+    font-size: 18px;
+    font-weight: normal;
+    color: $colgrey;
+    line-height: 27px;
+  }
+}
+
+.mark {
+  padding: 28px;
+  transform: translateX(-20%) translateY(-75%);
+  width: 380px;
+  background-color: #fff;
+  box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
+  border-radius: 8px;
+
+  &-absolute {
+    position: absolute;
+    transform: translateX(52px) translateY(35px);
   }
 
   &__row {
@@ -475,28 +502,6 @@ $collightblue: #286dbd;
     font-size: 16px;
     line-height: 24px;
     color: $colgrey;
-  }
-
-  &__text {
-    top: 0;
-    width: 100%;
-    max-width: 590px;
-  }
-
-  &__title {
-    font-family: 'Epilogue';
-    font-size: 32px;
-    font-weight: bold;
-    color: $coldarkblue;
-  }
-
-  &__description {
-    margin-top: 10px;
-    font-family: 'OpenSans';
-    font-size: 18px;
-    font-weight: normal;
-    color: $colgrey;
-    line-height: 27px;
   }
 }
 
@@ -977,6 +982,193 @@ $collightblue: #286dbd;
     text-decoration: dotted underline;
   }
 }
+
+.articles {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__article {
+    margin-top: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__block {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &-center {
+      justify-content: center;
+    }
+
+    &-start {
+      justify-content: flex-start;
+    }
+
+    &-ajstart {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    font-family: 'Epilogue';
+    font-size: 32px;
+    font-weight: bold;
+    color: $coldarkblue;
+  }
+
+  &__text,
+  &__textfirst,
+  &__textsecond,
+  &__textthird {
+    margin-top: 16px;
+    width: 100%;
+    font-family: 'OpenSans';
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: $colgrey;
+
+    & span {
+      color: $colgreen;
+    }
+
+    &-large {
+      width: 80%;
+    }
+
+    &-top {
+      margin-top: 35px;
+    }
+  }
+
+  &__phases {
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__first,
+  &__second,
+  &__third {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: flex-start;
+
+    &:hover .articles__line {
+      width: 100%;
+      height: 2px;
+      background-color: $colgreen;
+    }
+
+    &:hover h4 {
+      color: $colgreen;
+      font-weight: bold;
+    }
+  }
+
+  &__square {
+    width: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__line {
+    width: 50%;
+    height: 1px;
+    background-color: $colgrey;
+    transition: all 0.5s;
+  }
+
+  &__name {
+    margin-left: 10px;
+    font-family: 'Epilogue';
+    font-size: 22px;
+    font-weight: normal;
+    color: $colgrey;
+    transition: all 0.5s;
+  }
+
+  &__image {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__list {
+    width: 100%;
+    list-style-position: inside;
+    list-style: disc;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    width: 90%;
+    margin-top: 20px;
+    box-sizing: border-box;
+    font-family: 'OpenSans';
+    font-size: 18px;
+    color: $colgrey;
+
+    &::marker {
+      font-size: 1.2em;
+      animation: markeranimate 1s infinite linear;
+    }
+  }
+
+  &__imagebg {
+    position: relative;
+  }
+}
+
+@keyframes markeranimate {
+  0% {
+    color: $colgrey;
+  }
+  50% {
+    color: $coldarkblue;
+  }
+  100% {
+    color: $colgrey;
+  }
+}
+
+.active .articles__line {
+  width: 100%;
+  height: 2px;
+  background-color: $colgreen;
+}
+
+.active h4 {
+  color: $colgreen;
+  font-weight: bold;
+}
+
+.notvisibletext {
+  transform: translateX(150%);
+  display: none;
+}
+
 @keyframes animate {
   0% {
     background: $coldarkblue;
