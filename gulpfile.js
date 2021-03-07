@@ -31,6 +31,7 @@ let { src, dest } = require('gulp'),
   gulp = require('gulp'),
   browsersync = require('browser-sync').create(),
   fileinclude = require('gulp-file-include'),
+  htmlbeautify=require('gulp-html-beautify'),
   del = require('del'),
   scss = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
@@ -61,6 +62,7 @@ function html() {
   return src(path.src.html)
     .pipe(fileinclude())
     .pipe(webphtml())
+    .pipe(htmlbeautify())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream());
 }
