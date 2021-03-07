@@ -53,6 +53,11 @@
   margin-top: 160px;
 }
 
+.content {
+  width: 100%;
+  margin-top: 140px;
+}
+
 .cont {
   width: 100%;
   display: -webkit-box;
@@ -69,6 +74,27 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 60px 100px 60px 100px;
+}
+
+.itemcont {
+  width: 100%;
+  height: 90%;
+  margin: 40px 30px 40px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
 }
 
 .wrapper {
@@ -1166,6 +1192,182 @@
 .stepthree__text-span {
   font-weight: bold;
   color: #4cae50;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label svg > path {
+  cursor: pointer;
+  fill: transparent;
+  stroke: #4cae50;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.rating label svg > path:hover,
+.rating input:hover ~ label svg > path,
+.rating input:checked ~ label svg > path {
+  fill: #4cae50;
+}
+
+.testimonials {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.testimonials__title {
+  width: 100%;
+  text-align: center;
+  font-family: 'Epilogue';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: bold;
+  color: #111563;
+}
+
+.testimonials__description {
+  width: 100%;
+  margin-top: 16px;
+  text-align: center;
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  color: #3a3a3a;
+}
+
+.testimonials__list {
+  width: 100%;
+}
+
+.testimonials__items {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.testimonials__item {
+  width: 33.33333%;
+  max-width: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 500px;
+  max-height: 500px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
+          box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
+  border-radius: 8px;
+}
+
+.testimonials__rate {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonials__stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonials__text {
+  margin-right: 5px;
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #3a3a3a;
+}
+
+.testimonials__feedback {
+  width: 100%;
+  font-family: 'OpenSans';
+  font-style: italic;
+  font-size: 18px;
+  font-weight: normal;
+  color: #737883;
+  margin-top: 40px;
+}
+
+.testimonials__bottom {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.testimonials__user {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.testimonials__name {
+  margin-left: 10px;
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-size: 16px;
+  color: #3a3a3a;
+}
+
+.testimonials__details {
+  font-family: 'OpenSans';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  color: #737883;
+}
+
+.testimonials__biglist {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  color: #4cae50;
+  font-family: 'Epilogue';
+  font-weight: bold;
+  font-size: 16px;
+  -webkit-text-decoration: dotted underline;
+          text-decoration: dotted underline;
 }
 
 @-webkit-keyframes animate {
