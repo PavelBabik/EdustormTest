@@ -1,4 +1,6 @@
-@include font("Epilogue", "EpilogueBold", "700", "normal");
-@include font("Epilogue", "EpilogueRegular", "400", "normal");
-@include font("OpenSans", "OpenSansBold", "700", "normal");
-@include font("OpenSans", "OpenSansRegular", "400", "normal");
+@include font('Epilogue', 'EpilogueBold', '700', 'bold');
+@include font('OpenSans', 'OpenSansBold', '700', 'bold');
+@include font('Roboto', 'RobotoRegular', '400', 'normal');
+@include font('OpenSans', 'OpenSansRegular', '400', 'normal');
+@include font('Roboto', 'RobotoBold', '700', 'bold');
+@include font('Epilogue', 'EpilogueRegular', '400', 'normal');
